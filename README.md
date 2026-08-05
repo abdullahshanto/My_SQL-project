@@ -23,18 +23,6 @@ This is a beginner-friendly CRUD operation with Node.js, Express, and MySQL. It 
 - Updates student data
 - Deletes student data
 
-## Project structure
-
-.
-├── app.js
-├── package.json
-├── requirements.txt
-├── config/
-│   └── db.js
-├── controllers/
-│   └── stdcontrollers.js
-└── routes/
-    └── stdroutes.js
 
 
 - `app.js`: starts the server and connects the routes
