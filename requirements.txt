@@ -1,0 +1,17 @@
+# Project requirements — Node.js + MySQL CRUD API
+
+# Node (install via https://nodejs.org/) - recommended >=14
+# Install project dependencies with: npm install
+
+# npm packages (just `npm install`)
+express@5.2.1
+mysql2@3.22.3
+dotenv@17.4.2
+morgan@1.10.1
+colors@1.4.0
+color@5.0.3
+nodemon@3.1.14
+
+# System requirements
+MySQL server (recommended 5.7 or 8.0)
+Node.js (>=14)

@@ -1,0 +1,22 @@
+{
+  "name": "sql-crud",
+  "version": "1.0.0",
+  "description": "Node.js and MySQL student CRUD API",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "node --check app.js && node --check config/db.js && node --check controllers/stdcontrollers.js && node --check routes/stdroutes.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "color": "^5.0.3",
+    "colors": "^1.4.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "morgan": "^1.10.1",
+    "mysql2": "^3.22.3",
+    "nodemon": "^3.1.14"
+  }
+}
