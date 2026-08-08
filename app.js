@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const colors = require("colors");
 const morgan = require("morgan");
@@ -10,7 +11,9 @@ app.use(express.json());
 
 app.use(morgan("dev"));
 
-app.use("/students", require("./routes/stdroutes"));
+app.use(express.static(path.join(__dirname, "public")));
+
+app.use("/donors", require("./routes/stdroutes"));
 
 app.get("/test", (req, res) => {
   res.status(200).send("all ok");

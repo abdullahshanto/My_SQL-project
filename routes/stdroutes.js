@@ -1,28 +1,27 @@
 const express = require("express");
 const {
-  getstudent,
-  getstdbyID,
-  creat_table,
-  insert_data,
-  delete_table,
-  show_table,
-  updateStudent,
-  deleteStudent,
-  drop_table,
+  getDonors,
+  getDonorByID,
+  createTable,
+  insertDonor,
+  dropTable,
+  showTables,
+  updateDonor,
+  deleteDonor,
 } = require("../controllers/stdcontrollers");
 
 const router = express.Router();
 
 // table admin endpoints
-router.post("/table", creat_table);
-router.delete("/table", drop_table);
-router.get("/tables", show_table);
+router.post("/table", createTable);
+router.delete("/table", dropTable);
+router.get("/tables", showTables);
 
-// student CRUD endpoints
-router.get("/", getstudent);
-router.post("/", insert_data);
-router.get("/:id", getstdbyID);
-router.put("/:id", updateStudent);
-router.delete("/:id", deleteStudent);
+// donor CRUD endpoints
+router.get("/", getDonors);
+router.post("/", insertDonor);
+router.get("/:id", getDonorByID);
+router.put("/:id", updateDonor);
+router.delete("/:id", deleteDonor);
 
 module.exports = router;
