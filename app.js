@@ -25,3 +25,19 @@ app.get("/", (req, res) => {
 
 const port = process.env.PORT || 8000;
 
+async function startServer() {
+  try {
+    await dbPromise;
+    console.log("MySQL connected successfully".green);
+
+    app.listen(port, () => {
+      console.log(`Server running on http://localhost:${port}`.magenta);
+    });
+  } catch (err) {
+    console.log("DB connection failed".bgRed.white);
+    console.log(err);
+    process.exit(1);
+  }
+}
+
+startServer();
